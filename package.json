@@ -1,0 +1,28 @@
+{
+  "name": "ensina-presencas",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/index.js",
+    "worker": "node --env-file-if-exists=.env server/sync.js",
+    "migrate": "node --env-file-if-exists=.env server/migrate.js",
+    "bootstrap": "node --env-file-if-exists=.env server/bootstrap.js",
+    "test": "node --test tests/*.test.js",
+    "setup-event": "node --env-file-if-exists=.env server/seed-event.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "pg": "^8.16.3",
+    "google-auth-library": "^10.5.0",
+    "helmet": "^8.1.0",
+    "cookie-parser": "^1.4.7",
+    "qrcode": "^1.5.4",
+    "csv-parse": "^6.1.0",
+    "html5-qrcode": "^2.3.8",
+    "express-rate-limit": "^8.2.1"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.3.14"
+  }
+}
